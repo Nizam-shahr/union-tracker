@@ -11,7 +11,7 @@ export default function Home() {
   const [copied, setCopied] = useState(false);
 
   const appUrl = process.env.NODE_ENV === 'production'
-    ? 'https://your-app.vercel.app'
+    ? 'https://union-tracker.vercel.app'
     : 'http://localhost:3000';
 
   const validateAndGenerate = async () => {

@@ -31,7 +31,7 @@ export default function Home() {
       clearTimeout(timeoutId);
       const data = await res.json();
       if (res.ok) {
-        const newCount = Math.floor(Math.random() * (408 - 50 + 1)) + 150;
+        const newCount = Math.floor(Math.random() * (555 - 150 + 1)) + 150;
         setCount(newCount);
         setHistory((prev) => [{ username, count: newCount }, ...prev.slice(0, 4)]);
         setShowResult(true);
@@ -59,7 +59,7 @@ Developed by @devnizam
 Here:
 ${appUrl}
 
-Here's my allocation:
+Here's my allocation
 
 (Screenshot)
 
@@ -110,12 +110,14 @@ Pass it ion @urfriend`;
         <div className={styles.result}>
           <h2>@{username} mentioned $U {count} times! 🚀</h2>
           <p className={styles.resultSubtext}>
-             At current pre-market FDV.
+            At current pre-market FDV.
           </p>
-          <p className='text-bold'>
+          <p className={styles.boldText}>
             Allocation is $U{count}.
           </p>
-          <p>Price: ${(count * 2.3).toFixed(1)}🔥  </p>
+          <p className={styles.boldText}>
+            Price: ${(count * 2.3).toFixed(1)}🔥
+          </p>
           <button
             onClick={copyToClipboard}
             disabled={loading}
@@ -138,7 +140,16 @@ Pass it ion @urfriend`;
         </div>
       )}
       {error && <p className={styles.error}>{error}</p>}
-    
+      {history.length > 0 && (
+        <div className={styles.history}>
+          <h3 className={styles.historyTitle}>Recent $U Counts</h3>
+          <ul>
+            {history.map(({ username, count }, index) => (
+              <li key={index}>@{username}: {count} mentions ({(count * 2.3).toFixed(1)} $U)</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

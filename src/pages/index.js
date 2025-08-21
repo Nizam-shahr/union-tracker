@@ -140,16 +140,7 @@ Pass it ion @urfriend`;
         </div>
       )}
       {error && <p className={styles.error}>{error}</p>}
-      {history.length > 0 && (
-        <div className={styles.history}>
-          <h3 className={styles.historyTitle}>Recent $U Counts</h3>
-          <ul>
-            {history.map(({ username, count }, index) => (
-              <li key={index}>@{username}: {count} mentions ({(count * 2.3).toFixed(1)} $U)</li>
-            ))}
-          </ul>
-        </div>
-      )}
+      
     </div>
   );
 }

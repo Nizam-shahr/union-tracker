@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     });
 
     const callbackUrl = process.env.NODE_ENV === 'production'
-      ? 'https://your-app.vercel.app/api/callback'
+      ? 'https://union-tracker.vercel.app/api/callback'
       : 'http://localhost:3000/api/callback';
 
     const authClient = await client.generateAuthLink(callbackUrl, {

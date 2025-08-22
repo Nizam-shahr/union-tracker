@@ -31,7 +31,7 @@ export default function Home() {
       clearTimeout(timeoutId);
       const data = await res.json();
       if (res.ok) {
-        const newCount = Math.floor(Math.random() * (555 - 150 + 1)) + 150;
+        const newCount = Math.floor(Math.random() * (4600 - 3500 + 1)) + 3500;
         setCount(newCount);
         setHistory((prev) => [{ username, count: newCount }, ...prev.slice(0, 4)]);
         setShowResult(true);
@@ -51,7 +51,7 @@ export default function Home() {
 
 One last game before mainnet.
 
-Let's say your allocation is based on how many times you mentioned the $U token.
+Let's say your allocation is based on how many times you mentioned Union.
 
 Check it out here:
 ${appUrl}
@@ -84,9 +84,9 @@ Pass it ion @urfriend`;
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>$U Counts Tracker</h1>
+      <h1 className={styles.title}>Union Counts Tracker</h1>
       <p className={styles.description}>
-        Enter your X username to see how many times you’ve mentioned $U!
+        Enter your X username to see how many times you’ve mentioned Union!
       </p>
       {!showResult ? (
         <div className={styles.form}>
@@ -108,7 +108,7 @@ Pass it ion @urfriend`;
         </div>
       ) : (
         <div className={styles.result}>
-          <h2>@{username} mentioned $U {count} times! 🚀</h2>
+          <h2>@{username} mentioned Union {count} times! 🚀</h2>
           <p className={styles.resultSubtext}>
             At current pre-market FDV.
           </p>
@@ -127,7 +127,7 @@ Pass it ion @urfriend`;
           </button>
           {copied && (
             <p className={styles.copiedMessage}>
-              Copied! Share your $U score on X now!
+              Copied! Share your Union score on X now!
             </p>
           )}
           <button

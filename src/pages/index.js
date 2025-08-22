@@ -63,7 +63,7 @@ Here's my allocation
 
 (Screenshot)
 
-Pass it ion @urfriend`;
+Pass it ion @(tag ur friend)`;
     navigator.clipboard.writeText(message)
       .then(() => {
         setCopied(true);

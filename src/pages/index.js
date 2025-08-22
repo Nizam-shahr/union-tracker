@@ -123,7 +123,7 @@ Pass it ion @(tag ur friend)`;
             disabled={loading}
             className={styles.copyButton}
           >
-            {copied ? 'Copied!' : 'Screenshot, Copy & Share'}
+            {copied ? 'Copied!' : 'Share on X'}
           </button>
           {copied && (
             <p className={styles.copiedMessage}>

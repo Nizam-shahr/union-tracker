@@ -142,7 +142,14 @@ Pass it ion @(tag ur friend)`;
         </div>
       )}
       {error && <p className={styles.error}>{error}</p>}
+      <div className='flex flex-col gap-8'>
       <i>Note: This is not 100% accurate and subject to changes....</i>
+      <div></div>
+        <a className='text-2xl' href="https://x.com/devnizam" target="_blank">
+            Developed by @devnizam
+        </a>
+              </div>
+      
     </div>
   );
 }

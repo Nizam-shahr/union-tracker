@@ -123,7 +123,7 @@ Pass it ion @(tag ur friend)`;
             disabled={loading}
             className={styles.copyButton}
           >
-            {copied ? 'Copied!' : 'Copy & Share'}
+            {copied ? 'Copied!' : 'Screenshot, Copy & Share'}
           </button>
           {copied && (
             <p className={styles.copiedMessage}>
@@ -137,10 +137,12 @@ Pass it ion @(tag ur friend)`;
           >
             Back to Search
           </button>
+
+          
         </div>
       )}
       {error && <p className={styles.error}>{error}</p>}
-      
+      <i>Note: This is not 100% accurate and subject to changes....</i>
     </div>
   );
 }

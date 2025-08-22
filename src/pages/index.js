@@ -51,7 +51,7 @@ export default function Home() {
 
 One last game before mainnet.
 
-Let's say your allocation is based on how many times you mentioned Union.
+Let's say your @union_build allocation is based on how many times you mentioned Union.
 
 Check it out here:
 ${appUrl}
